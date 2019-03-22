@@ -32,6 +32,7 @@ public class playerBehavior : MonoBehaviour
     /// Esta função limita o movimento do jogador pela tela
     /// </summary>
      void limit()
+    
     {
         if (transform.position.x > xMax)
         {
@@ -43,3 +44,5 @@ public class playerBehavior : MonoBehaviour
         }
     }
 }
+     
+
