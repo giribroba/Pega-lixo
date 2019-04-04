@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class playerBehavior : MonoBehaviour
 {
-    public float xMax, speed;
+    public float xMax, speed, speedC;
     float moviment;
 
-    public static float força;
+    public static float força, speedCenario;
 
+    void Start()
+    {
+        speedCenario = speedC;    
+    }
     void Update()
     {
         move();
