@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class playerBehavior : MonoBehaviour
 {
-    public float xMax;
+    public float xMax, speed;
     float moviment;
 
-    public float speed;
+    public static float força;
 
-    void Start() 
-    {
-        transform.position = new Vector3(0, -4.9f);   
-    }
     void Update()
     {
         move();
@@ -24,8 +20,7 @@ public class playerBehavior : MonoBehaviour
     /// </summary>
     void move()
     {
-        moviment = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * moviment * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * força * Time.deltaTime);
     }
 
     /// <summary>

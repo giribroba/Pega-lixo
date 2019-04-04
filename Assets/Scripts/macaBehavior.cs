@@ -8,8 +8,18 @@ public class macaBehavior : MonoBehaviour
     public int score; 
     void Update()
     {
-        cair();  
+        cair();
+        destroir();
     }
+
+    void destroir()
+    {
+        if (transform.position.y <= -5.8f)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void cair()
     {
         transform.Translate(Vector3.down * speed * Time.deltaTime);
