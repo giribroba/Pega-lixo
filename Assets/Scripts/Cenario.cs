@@ -11,6 +11,10 @@ public class Cenario : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.up * -playerBehavior.speedCenario * Time.deltaTime);
+        if (transform.position.y < -13)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
