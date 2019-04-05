@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class macaBehavior : MonoBehaviour
 {
-    public float speed; 
+    public float speed;
+    public int score; 
     void Update()
     {
         cair();  
@@ -18,6 +19,7 @@ public class macaBehavior : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            scoreCount.Count += score;
             Destroy(gameObject); 
         }  
     }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7444492348293464999}
   - component: {fileID: 7444492348293464998}
   - component: {fileID: 7444492348293464997}
-  - component: {fileID: 7444492348293464996}
+  - component: {fileID: 6798217078801788932}
   m_Layer: 0
   m_Name: maca
   m_TagString: Untagged
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f9dba343bd50f6a4e822346d4b19c0f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,7 +97,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
---- !u!114 &7444492348293464996
+--- !u!114 &6798217078801788932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,7 +106,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7444492348293464995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cb441fe493cf76449d4f2e948b25d1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 733031b6ca66e484fbdad89f6d64c5a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  score: 5
