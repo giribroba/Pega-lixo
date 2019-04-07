@@ -8,6 +8,7 @@ public class playerBehavior : MonoBehaviour
     float moviment;
 
     public static float força, speedCenario;
+    public static bool pressedL, pressedR;
 
     void Start()
     {

@@ -9,34 +9,47 @@ public class botão : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public tipo botao;
     public float sensibility;
 
-    bool pressed;
-
     public void OnPointerDown(PointerEventData eventData)
     {
-        pressed = true;
+        if (botao == tipo.L)
+        {
+            playerBehavior.pressedL = true;
+        }
+        if (botao == tipo.R)
+        {
+            playerBehavior.pressedR = true;
+        }
+
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        pressed = false;
+        if (botao == tipo.L)
+        {
+            playerBehavior.pressedL = false;
+        }
+        if (botao == tipo.R)
+        {
+            playerBehavior.pressedR = false;
+        }
         playerBehavior.força = 0;
     }
 
     void Update()
     {
-        if (pressed)
+        if (playerBehavior.pressedL && playerBehavior.pressedR)
         {
-            switch (botao)
-            {
-                case tipo.L:
-                    playerBehavior.força -= Time.deltaTime * sensibility;
-                    playerBehavior.força = Mathf.Clamp(playerBehavior.força, -1, 0);
-                    break;
-                case tipo.R:
-                    playerBehavior.força += Time.deltaTime * sensibility;
-                    playerBehavior.força = Mathf.Clamp(playerBehavior.força, 0, 1);
-                    break;
-            }
+            playerBehavior.força = 0;
+        }
+        else if(playerBehavior.pressedL)
+        {
+            playerBehavior.força -= sensibility * Time.deltaTime;
+            playerBehavior.força = Mathf.Clamp(playerBehavior.força, -1, 0);
+        }
+        else if (playerBehavior.pressedR)
+        {
+            playerBehavior.força += sensibility * Time.deltaTime;
+            playerBehavior.força = Mathf.Clamp(playerBehavior.força, 0, 1);
         }
     }
 }
