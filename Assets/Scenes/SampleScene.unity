@@ -701,8 +701,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2055238799
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a913b45fd901c2a40b96c6dd2f0b1209, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -831,8 +831,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1372300127
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 63370f9af94ae6745bf94ba5446541d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1305,5 +1305,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xMax: 2.46
   Y: 6
-  maca: {fileID: 7444492348293464995, guid: 81b1289cc600c0f418dd261ce51b1e3e, type: 3}
+  lata: {fileID: 8454876986330098666, guid: 2fe64bd647d038f4b8fb812b32794fb9, type: 3}
+  colher: {fileID: 4704471460089596509, guid: 334a7e0f7a0de1742988f7210f060725, type: 3}
+  caixa: {fileID: 221738018613283353, guid: 2aeb2a2809efa2f4b9b8353791b18b2e, type: 3}
+  copo: {fileID: 5901504331543100962, guid: 5b04b40ba6b8b7c448e5e4a889361c75, type: 3}
+  garrafa: {fileID: 1248863368181390275, guid: 258210fbd2eaaae46a05354f86be4fc9, type: 3}
+  lampada: {fileID: 64092699760439590, guid: aa46c163e6d4ddd4b9a46b69e991839b, type: 3}
   CD: 0.5

@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class macaBehavior : MonoBehaviour
+public class lixoBehavior : MonoBehaviour
 {
     public float speed;
     public int score; 
+
+    void Start()    
+    {
+        transform.eulerAngles =new Vector3(transform.rotation.x, transform.rotation.y, lixoSpawn.rotacao);   
+    }
     void Update()
     {
         cair();
@@ -22,7 +27,8 @@ public class macaBehavior : MonoBehaviour
 
     void cair()
     {
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+        // transform.Translate(Vector3.down * speed * Time.deltaTime);
+        transform.position = new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other) 
