@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class MenuInicial : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 0;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void ChamaJogo()
     {
-        
-    }
-    public void ChamaJogo(){
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+    }
+    
+    public void Tutorial()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+        
     }
 }

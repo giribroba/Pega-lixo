@@ -6,7 +6,11 @@ public class Botões_P_menu : MonoBehaviour
 {
     [SerializeField]RectTransform gaveta, pause;
     [SerializeField]float gSpeed;
-
+    void Start()
+    {
+        Time.timeScale = 1;
+        scoreCount.Count = 0;
+    }
     public void Pause()
     {
         if (Time.timeScale == 0)
@@ -31,5 +35,10 @@ public class Botões_P_menu : MonoBehaviour
         {
             gaveta.anchoredPosition = new Vector2(234, gaveta.anchoredPosition.y);
         }
+    }
+
+    public void MainMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 }
