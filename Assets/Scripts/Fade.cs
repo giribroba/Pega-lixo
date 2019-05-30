@@ -17,7 +17,14 @@ public class Fade : MonoBehaviour
 
     void Update()
     {
-        fade.color = tempColor;
-        tempColor.a -= ((fade.color.a > midOpa) ? sensibilidade * Time.deltaTime : 0);
+        if (Time.timeScale == 0)
+        {
+            fade.color = new Color(fade.color.r, fade.color.g, fade.color.b, 0.7f);
+        }
+        else
+        {
+            fade.color = tempColor;
+            tempColor.a -= ((fade.color.a > midOpa) ? sensibilidade * Time.deltaTime : 0);
+        }  
     }
 }
