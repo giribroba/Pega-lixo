@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class botão : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    public enum tipo {L,R};
-    public tipo botao;
-    public float sensibility;
+    [SerializeField] enum tipo {L,R};
+    [SerializeField] tipo botao;
+    [SerializeField] float sensibility;
 
     public void OnPointerDown(PointerEventData eventData)
     {

@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Cenario : MonoBehaviour
 {
-    public enum tipo {baixo, meio, topo};
-    public tipo cenario;
-    public GameObject meio, topo;
+    [SerializeField] enum tipo {baixo, meio, topo};
+    [SerializeField] tipo cenario;
+    [SerializeField] GameObject meio, topo;
+    [SerializeField] float yMin, ySpawn;
+
 
     void Update()
     {
         transform.Translate(Vector3.up * -playerBehavior.speedCenario * Time.deltaTime);
-        if (transform.position.y < -13)
+        if (transform.position.y < yMin)
         {
             Destroy(gameObject);
         }
@@ -21,7 +23,7 @@ public class Cenario : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Instantiate(meio, new Vector3(0, 14.1f), Quaternion.identity);
+            Instantiate(meio, new Vector3(0, ySpawn), Quaternion.identity);
         }
     }
 }

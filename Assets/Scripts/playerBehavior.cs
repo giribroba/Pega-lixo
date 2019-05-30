@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerBehavior : MonoBehaviour
 {
-    public float xMax, speed, speedC;
+    [SerializeField] float xMax, speed, speedC;
     float moviment;
 
     public static float força, speedCenario;

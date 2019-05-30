@@ -74,7 +74,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 31.25, y: 55.64}
+  m_Size: {x: 7.4999995, y: 30.349998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -95,3 +95,5 @@ MonoBehaviour:
   cenario: 2
   meio: {fileID: 295502879517069338, guid: 9f0e54a0dd377e44c8bde58da68ed339, type: 3}
   topo: {fileID: 4219166796356354304}
+  yMin: 0
+  ySpawn: 0

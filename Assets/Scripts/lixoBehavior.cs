@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class lixoBehavior : MonoBehaviour
 {
-    public float speed;
-    public int score; 
+    [SerializeField] float speed;
+    [SerializeField] int score; 
 
     void Start()    
     {
@@ -27,7 +27,6 @@ public class lixoBehavior : MonoBehaviour
 
     void cair()
     {
-        // transform.Translate(Vector3.down * speed * Time.deltaTime);
         transform.position = new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime);
     }
 
