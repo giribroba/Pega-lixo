@@ -8,14 +8,28 @@ public class Cenario : MonoBehaviour
     [SerializeField] tipo cenario;
     [SerializeField] GameObject meio, topo;
     [SerializeField] float yMin, ySpawn;
+    bool fim;
 
-
+    void Start()
+    {
+        fim = false;
+    }
     void Update()
     {
         transform.Translate(Vector3.up * -playerBehavior.speedCenario * Time.deltaTime);
+
+        if (BarraO2.O2 <= 0 && !fim)
+        {
+            playerBehavior.speedCenario *= 2;
+            fim = !fim;
+        }
         if (transform.position.y < yMin)
         {
             Destroy(gameObject);
+        }
+        if (cenario == tipo.topo && transform.position.y <= -7.72f)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
         }
     }
 
@@ -23,7 +37,15 @@ public class Cenario : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Instantiate(meio, new Vector3(0, ySpawn), Quaternion.identity);
+            if (BarraO2.O2 > 0)
+            {
+                Instantiate(meio, new Vector3(0, ySpawn), Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(topo, new Vector3(0, ySpawn - 1), Quaternion.identity);
+            }
+            
         }
     }
 }

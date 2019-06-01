@@ -24,7 +24,15 @@ public class Fade : MonoBehaviour
         else
         {
             fade.color = tempColor;
-            tempColor.a -= ((fade.color.a > midOpa) ? sensibilidade * Time.deltaTime : 0);
+            if (BarraO2.O2 > 0)
+            {
+                tempColor.a -= ((fade.color.a > midOpa) ? sensibilidade * Time.deltaTime : 0);
+            }
+            else
+            {
+                tempColor.a -= sensibilidade * Time.deltaTime;
+            }
+            
         }  
     }
 }
