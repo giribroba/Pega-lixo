@@ -23,6 +23,7 @@ public class Tanque : MonoBehaviour
         else if (BarraO2.O2 > 33)
         {
             cors.r = 1;
+            cors.g = 1;
         }
         else
         {

@@ -1074,6 +1074,7 @@ GameObject:
   - component: {fileID: 915641028}
   - component: {fileID: 915641027}
   - component: {fileID: 915641029}
+  - component: {fileID: 915641030}
   m_Layer: 5
   m_Name: Barra O2
   m_TagString: Untagged
@@ -1151,7 +1152,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicador: {fileID: 178554198}
+  indicadorI: {fileID: 178554199}
+  barraI: {fileID: 915641027}
   porcentagem: {fileID: 748253041}
+--- !u!95 &915641030
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915641025}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f7ef2ce82057b4a46b2ce1b8ddba30cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1012446615
 GameObject:
   m_ObjectHideFlags: 0

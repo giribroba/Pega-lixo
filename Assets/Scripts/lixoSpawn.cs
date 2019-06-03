@@ -27,7 +27,6 @@ public class lixoSpawn : MonoBehaviour
             rotacao = Random.Range(-1, 360);
             if (BarraO2.O2 > 0)
             {
-
                 switch (tipo)
                 {
                     case 1:
@@ -52,7 +51,7 @@ public class lixoSpawn : MonoBehaviour
             }
             cdTemp = CD;
         }
-        if (O2Temp <= 0)
+        if (O2Temp <= 0 && BarraO2.O2 > 0)
         {
             Instantiate(O2, new Vector3(X, Y), Quaternion.identity);
             O2Temp = O2CD;

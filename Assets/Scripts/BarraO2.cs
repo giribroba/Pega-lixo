@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class BarraO2 : MonoBehaviour
 {
     [SerializeField] RectTransform indicador;
+    [SerializeField] Image indicadorI, barraI;
     [SerializeField] Text porcentagem;
+    Color barraC;
     public static float O2;
 
     void Start()
     {
+        barraC = barraI.color;
         O2 = 100;
     }
 
@@ -21,6 +24,10 @@ public class BarraO2 : MonoBehaviour
         if (O2 > 0)
         {
             O2 -= (Time.deltaTime * 1.25f);
+        }
+        if (O2 <= 10)
+        {
+            GetComponent<Animator>().SetBool("Piscando", true);
         }
         if (O2 > 100)
         {

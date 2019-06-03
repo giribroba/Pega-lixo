@@ -27,10 +27,12 @@ public class O2Behaviour : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && BarraO2.O2 > 0)
         {
+            speed = 5;
+            GetComponent<Animator>().SetBool("Estourou", true);
             BarraO2.O2 += 10;
-            Destroy(gameObject);
+            Destroy(gameObject, 0.3f);
         }
         if (other.tag == "Limit")
         {
