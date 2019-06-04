@@ -14,7 +14,7 @@ public class O2Behaviour : MonoBehaviour
 
     void destroir()
     {
-        if (transform.position.y <= -5.8f)
+        if (transform.position.y <= -5.8f || BarraO2.O2<=0)
         {
             Destroy(gameObject);
         }
@@ -33,10 +33,6 @@ public class O2Behaviour : MonoBehaviour
             GetComponent<Animator>().SetBool("Estourou", true);
             BarraO2.O2 += 10;
             Destroy(gameObject, 0.3f);
-        }
-        if (other.tag == "Limit")
-        {
-            Destroy(gameObject);
         }
     }
 

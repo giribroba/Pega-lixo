@@ -13,7 +13,6 @@ public class BarraO2 : MonoBehaviour
 
     void Start()
     {
-        barraC = barraI.color;
         O2 = 100;
     }
 
@@ -28,6 +27,10 @@ public class BarraO2 : MonoBehaviour
         if (O2 <= 10)
         {
             GetComponent<Animator>().SetBool("Piscando", true);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("Piscando", false);
         }
         if (O2 > 100)
         {

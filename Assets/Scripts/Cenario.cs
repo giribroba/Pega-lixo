@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cenario : MonoBehaviour
 {
-    [SerializeField] enum tipo {baixo, meio, topo};
+    enum tipo {baixo, meio, topo};
     [SerializeField] tipo cenario;
     [SerializeField] GameObject meio, topo;
     [SerializeField] float yMin, ySpawn;

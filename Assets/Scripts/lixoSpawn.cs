@@ -21,7 +21,7 @@ public class lixoSpawn : MonoBehaviour
     void Update()
     {
         X = Random.Range (-xMax, xMax);
-        tipo = Random.Range (0,8);
+        tipo = Random.Range (0,7);
         if (cdTemp <= 0)
         {            
             rotacao = Random.Range(-1, 360);

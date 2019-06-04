@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class lixoBehavior : MonoBehaviour
 {
+    enum tipo {lixo, coral}
     [SerializeField] float speed;
-    [SerializeField] int score; 
+    [SerializeField] int score;
+    [SerializeField] tipo objeto;
 
     void Start()    
     {
@@ -32,12 +34,12 @@ public class lixoBehavior : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && objeto == tipo.lixo)
         {
             scoreCount.Count += score;
             Destroy(gameObject); 
         }
-        if (other.tag == "Limit")
+        else if (other.tag == "Player" && objeto == tipo.coral)
         {
             Destroy(gameObject);
         }
