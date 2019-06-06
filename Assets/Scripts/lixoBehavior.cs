@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class lixoBehavior : MonoBehaviour
 {
-    enum tipo {lixo, coral}
+    enum tipo {lixo, inimigo}
     [SerializeField] float speed;
     [SerializeField] int score;
     [SerializeField] tipo objeto;
@@ -44,10 +44,12 @@ public class lixoBehavior : MonoBehaviour
             scoreCount.Count += score;
             Destroy(gameObject); 
         }
-        else if (other.tag == "Player" && objeto == tipo.coral)
+        else if (other.tag == "Player" && objeto == tipo.inimigo)
         {
             Personagem.GetComponent<playerBehavior>().perderVida();
-            Destroy(gameObject);
+            GetComponent<Animator>().SetBool("sumindo", true);
+            speed /= 2;
+            Destroy(gameObject, 2);
         }
     }
 }
