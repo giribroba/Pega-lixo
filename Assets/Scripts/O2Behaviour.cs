@@ -32,8 +32,12 @@ public class O2Behaviour : MonoBehaviour
             speed = 5;
             GetComponent<Animator>().SetBool("Estourou", true);
             BarraO2.O2 += 10;
+            GetComponent<AudioSource>().Play();
             Destroy(gameObject, 0.3f);
+            
+
         }
     }
+
 
 }
