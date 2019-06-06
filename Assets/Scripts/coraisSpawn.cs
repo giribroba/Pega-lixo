@@ -13,7 +13,10 @@ public class coraisSpawn : MonoBehaviour
     
     void Spawn()
     {
-        Instantiate(corais[Random.Range(0, corais.Length+1)], new Vector2(xMin_max[Random.Range(0, 2)],6),Quaternion.identity);
+        if(BarraO2.O2 > 0 )
+        {
+            Instantiate(corais[Random.Range(0, corais.Length+1)], new Vector2(xMin_max[Random.Range(0, 2)],6),Quaternion.identity);
+        }  
     }
 
 }

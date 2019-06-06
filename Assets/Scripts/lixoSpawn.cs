@@ -6,7 +6,7 @@ public class lixoSpawn : MonoBehaviour
 {    
     [SerializeField] float xMax;
     [SerializeField] float Y;
-    [SerializeField] GameObject lata, colher, caixa, copo, garrafa, lampada, O2;
+    [SerializeField] GameObject lata, colher, caixa, copo, garrafa, lampada, O2, copoSB, canudoA, canudoL;
     [SerializeField] float CD, O2CD;
     
     public static float rotacao;
@@ -21,7 +21,7 @@ public class lixoSpawn : MonoBehaviour
     void Update()
     {
         X = Random.Range (-xMax, xMax);
-        tipo = Random.Range (0,7);
+        tipo = Random.Range (0,10);
         if (cdTemp <= 0)
         {            
             rotacao = Random.Range(-1, 360);
@@ -46,6 +46,15 @@ public class lixoSpawn : MonoBehaviour
                         break;
                     case 6:
                         Instantiate(lampada, new Vector3(X, Y), Quaternion.identity);
+                        break;
+                    case 7:
+                        Instantiate(canudoL, new Vector3(X, Y), Quaternion.identity);
+                        break;
+                    case 8:
+                        Instantiate(canudoA, new Vector3(X, Y), Quaternion.identity);
+                        break;
+                    case 9:
+                        Instantiate(copoSB, new Vector3(X, Y), Quaternion.identity);
                         break;
                 }
             }

@@ -96,6 +96,7 @@ MonoBehaviour:
   cenario: 1
   meio: {fileID: 295502879517069338}
   topo: {fileID: 4219166796356354304, guid: 391627ff005a8d14f9de4de74f1f4185, type: 3}
+  player: {fileID: 0}
   yMin: -18
   ySpawn: 18.8
 --- !u!61 &1535977173046684030

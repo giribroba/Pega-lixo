@@ -8,7 +8,10 @@ public class playerBehavior : MonoBehaviour
     [SerializeField] float xMax, speed, speedC;
     [SerializeField] Image[] vidas;
     [SerializeField] Image fade;
-    [SerializeField] Text textoC;
+    [SerializeField] Text textoC, textoScore;
+    [SerializeField] GameObject pause;
+    [SerializeField] RectTransform home;
+    bool fadeOver;
     float moviment;
 
     public static float força, speedCenario;
@@ -53,7 +56,7 @@ public class playerBehavior : MonoBehaviour
     {
         for (int i = 0; i < vidas.Length; i++)
         {
-            if (vidas[i].color == new Color(1,0,0))
+            if (vidas[i].color == new Color(1,1,1,0.6f))
             {
                 vidas[i].color = new Color(0,0,0,0);
                 break;
@@ -70,6 +73,9 @@ public class playerBehavior : MonoBehaviour
         Time.timeScale = 0;
         fade.color = new Color(0,0,0,0.7f);
         textoC.text = "GAME OVER";
+        textoScore.text = ("Pontos: " + scoreCount.Count);
+        Destroy(pause);
+        home.anchoredPosition = new Vector2(0,-146);
     }
 }
      

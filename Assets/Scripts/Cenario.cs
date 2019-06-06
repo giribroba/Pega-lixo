@@ -8,10 +8,12 @@ public class Cenario : MonoBehaviour
     [SerializeField] tipo cenario;
     [SerializeField] GameObject meio, topo;
     [SerializeField] float yMin, ySpawn;
+    GameObject player;
     bool fim;
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         fim = false;
     }
     void Update()
@@ -20,7 +22,7 @@ public class Cenario : MonoBehaviour
 
         if (BarraO2.O2 <= 0 && !fim)
         {
-            playerBehavior.speedCenario *= 2;
+            playerBehavior.speedCenario *= 2;          
             fim = !fim;
         }
         if (transform.position.y < yMin)
@@ -29,7 +31,7 @@ public class Cenario : MonoBehaviour
         }
         if (cenario == tipo.topo && transform.position.y <= -7.72f)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+            player.GetComponent<playerBehavior>().GameOver();
         }
     }
 

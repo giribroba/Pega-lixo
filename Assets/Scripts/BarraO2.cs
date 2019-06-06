@@ -13,7 +13,7 @@ public class BarraO2 : MonoBehaviour
 
     void Start()
     {
-        O2 = 100;
+        O2 = 10;
     }
 
     void Update()
