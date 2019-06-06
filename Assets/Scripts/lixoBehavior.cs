@@ -8,10 +8,15 @@ public class lixoBehavior : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] int score;
     [SerializeField] tipo objeto;
+    GameObject Personagem;
 
     void Start()    
     {
-        transform.eulerAngles =new Vector3(transform.rotation.x, transform.rotation.y, lixoSpawn.rotacao);   
+        Personagem = GameObject.FindWithTag("Player");
+        if (objeto == tipo.lixo)
+        {
+            transform.eulerAngles =new Vector3(transform.rotation.x, transform.rotation.y, lixoSpawn.rotacao); 
+        }      
     }
     void Update()
     {
@@ -41,6 +46,7 @@ public class lixoBehavior : MonoBehaviour
         }
         else if (other.tag == "Player" && objeto == tipo.coral)
         {
+            Personagem.GetComponent<playerBehavior>().perderVida();
             Destroy(gameObject);
         }
     }

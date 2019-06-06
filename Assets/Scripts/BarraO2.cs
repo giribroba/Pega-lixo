@@ -22,19 +22,12 @@ public class BarraO2 : MonoBehaviour
         indicador.anchoredPosition = new Vector3(0, -183.88f + ((O2 / 50) * 183.88f));
         if (O2 > 0)
         {
-            O2 -= (Time.deltaTime * 1.25f);
-        }
-        if (O2 <= 10)
-        {
-            GetComponent<Animator>().SetBool("Piscando", true);
-        }
-        else
-        {
-            GetComponent<Animator>().SetBool("Piscando", false);
+            O2 -= (Time.deltaTime * 2.00f);
         }
         if (O2 > 100)
         {
             O2 = 100;
         }
+        GetComponent<Animator>().SetBool("Piscando", (O2 <= 10)? true : false);
     }
 }
