@@ -7,6 +7,6 @@ public class Peixes : MonoBehaviour
     [SerializeField] float speed; 
     void Update()
     {
-        transform.translate(Vector3.Right * -Speed * Time.deltaTime);
+        transform.Translate(Vector3.right * -speed * Time.deltaTime);
     }
 }
