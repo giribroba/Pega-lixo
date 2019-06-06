@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class coraisSpawn : MonoBehaviour
+public class inimigosSpawn : MonoBehaviour
 {
     [SerializeField] GameObject[] corais;
     [SerializeField] float[] xMin_max;
