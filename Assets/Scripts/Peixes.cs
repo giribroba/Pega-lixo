@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Peixes : MonoBehaviour
 {
-    [SerializeField] float speed; 
+    [SerializeField] float speed, yMin; 
     void Update()
     {
         transform.Translate(Vector3.right * -speed * Time.deltaTime);
+        transform.position = new Vector2(transform.position.x, transform.position.y - (2/3 * playerBehavior.speedCenario) * Time.deltaTime);
+        if (transform.position.y < yMin)
+        {
+            Destroy(gameObject);
+        }
     }
 }

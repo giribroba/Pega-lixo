@@ -49,7 +49,7 @@ public class lixoBehavior : MonoBehaviour
             Personagem.GetComponent<playerBehavior>().perderVida();
             GetComponent<Animator>().SetBool("sumindo", true);
             speed /= 2;
-            Destroy(gameObject, 2);
+            Destroy(gameObject, 0.5f);
         }
     }
 }

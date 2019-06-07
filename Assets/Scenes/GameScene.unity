@@ -1592,7 +1592,7 @@ MonoBehaviour:
   meio: {fileID: 295502879517069338, guid: 9f0e54a0dd377e44c8bde58da68ed339, type: 3}
   topo: {fileID: 4219166796356354304, guid: 391627ff005a8d14f9de4de74f1f4185, type: 3}
   yMin: -18
-  ySpawn: 18.4
+  ySpawn: 18
 --- !u!212 &1240919092
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1830,7 +1830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3.48}
+  m_AnchoredPosition: {x: 4.38, y: -3.63}
   m_SizeDelta: {x: 359.7, y: 619.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1475463981
@@ -2239,6 +2239,7 @@ GameObject:
   - component: {fileID: 1950992987}
   - component: {fileID: 1950992984}
   - component: {fileID: 1950992985}
+  - component: {fileID: 1950992988}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2406,13 +2407,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccc1eedac71d0b5408bdef8c315baa77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corais:
+  inimigos:
   - {fileID: 703273560547169516, guid: c4f2dc75ae857a244ae631471463e751, type: 3}
   - {fileID: 1555417679887363961, guid: 5405fdfcc0a315a4cbea092968ca0574, type: 3}
   - {fileID: 0}
-  xMin_max:
-  - -1.7
-  - 1.7
+  xMin_max: 1.853864
 --- !u!50 &1950992986
 Rigidbody2D:
   serializedVersion: 4
@@ -2460,6 +2459,26 @@ MonoBehaviour:
   canudoL: {fileID: 7131663738899211226, guid: 7003dd0caa7c97d41b8a25b02db5a0e9, type: 3}
   CD: 0.5
   O2CD: 10
+--- !u!114 &1950992988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950992980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4848a8ecbf4e0be45b9f4aef5841ea7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peixes:
+  - {fileID: 2963762250782702208, guid: 67a1e9841477b7f47b0d50c02a87e4d8, type: 3}
+  - {fileID: 7251083311073049915, guid: a93adf2227a3c4142beeeacc50bd3c21, type: 3}
+  - {fileID: 1816078146128497472, guid: 8df29298485c74d4ab5174a6233f8846, type: 3}
+  - {fileID: 2515505132146288778, guid: 9702c7903e3e92e40a4aa778d8238402, type: 3}
+  - {fileID: 1024972830333696482, guid: 9c3a96cfc33077a4ba7934718a147a23, type: 3}
+  - {fileID: 5848339350553845203, guid: 16669407a13539e40a57c68329375b41, type: 3}
+  yMax: 5.5
 --- !u!1 &2016772940
 GameObject:
   m_ObjectHideFlags: 0

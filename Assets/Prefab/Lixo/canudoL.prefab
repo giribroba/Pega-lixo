@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  score: 0
+  score: 5
   objeto: 0
 --- !u!60 &521474254608139562
 PolygonCollider2D:

@@ -5,19 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MenuInicial : MonoBehaviour
 {
+    [SerializeField] string Cena;
     void Start()
     {
         Time.timeScale = 0;
     }
-    public void ChamaJogo()
+    public void ChamaCena()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(Cena);
     }
     
-    public void Tutorial()
-    {
-        SceneManager.LoadScene("GameScene");  
-    }
     public void QuitGame()
     {
         Application.Quit();

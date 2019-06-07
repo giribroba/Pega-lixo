@@ -70,12 +70,12 @@ public class playerBehavior : MonoBehaviour
 
     public void GameOver()
     {
-        Time.timeScale = 0;
         fade.color = new Color(0,0,0,0.7f);
         textoC.text = "GAME OVER";
         textoScore.text = ("Pontos: " + scoreCount.Count);
         Destroy(pause);
         home.anchoredPosition = new Vector2(0,-146);
+        Time.timeScale = 0;
     }
 }
      
