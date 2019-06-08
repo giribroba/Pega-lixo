@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,9 +7,10 @@ public class playerBehavior : MonoBehaviour
     [SerializeField] float xMax, speed, speedC;
     [SerializeField] Image[] vidas;
     [SerializeField] Image fade;
-    [SerializeField] Text textoC, textoScore;
+    [SerializeField] Text textoC, textoScore, recorde;
     [SerializeField] GameObject pause;
     [SerializeField] RectTransform home;
+    public static int hgScore;
     bool fadeOver;
     float moviment;
 
@@ -71,7 +71,9 @@ public class playerBehavior : MonoBehaviour
     public void GameOver()
     {
         fade.color = new Color(0,0,0,0.7f);
+        SaveLoad.recorde = scoreCount.Count;
         textoC.text = "GAME OVER";
+        recorde.text = ("Recorde: " + hgScore.ToString());
         textoScore.text = ("Pontos: " + scoreCount.Count);
         Destroy(pause);
         home.anchoredPosition = new Vector2(0,-146);

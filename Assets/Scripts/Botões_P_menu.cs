@@ -1,12 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Botões_P_menu : MonoBehaviour
 {
-    [SerializeField]RectTransform gaveta, pause;
-    [SerializeField]float gSpeed;
+    [SerializeField] RectTransform gaveta, pause;
+    [SerializeField] float gSpeed;
+    [SerializeField] GameObject[] Audios;
+    [SerializeField] Sprite[] muteSprites;
+    [SerializeField] Image mute;
     void Start()
     {
         Time.timeScale = 1;
@@ -25,6 +28,10 @@ public class Botões_P_menu : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+    public void Mute()
+    {
+        MenuInicial.mute = !MenuInicial.mute;
+    }
 
     void AbrirGaveta()
     {
@@ -41,5 +48,14 @@ public class Botões_P_menu : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    private void Update()
+    {
+        foreach(GameObject i in Audios)
+        {
+            i.GetComponent<AudioSource>().enabled = !MenuInicial.mute;
+        }
+        mute.sprite = muteSprites[(MenuInicial.mute) ? 1 : 0];
     }
 }

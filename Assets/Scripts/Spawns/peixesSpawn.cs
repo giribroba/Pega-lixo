@@ -15,11 +15,11 @@ public class peixesSpawn : MonoBehaviour
     {
         //lado = Random.Range(0,2);
         lado = 1;
-        if (lado == 0)
+        if (lado == 0 && BarraO2.O2 != 0)
         {
             Instantiate(peixes[Random.Range(0, peixes.Length + 1)], new Vector2(-3.8f, Random.Range(-3, yMax)), Quaternion.identity);
         }
-        else
+        else if(BarraO2.O2 != 0)
         {
             Instantiate(peixes[Random.Range(0, peixes.Length + 1)], new Vector2(3.8f, Random.Range(-3, yMax)), Quaternion.identity);
         }
