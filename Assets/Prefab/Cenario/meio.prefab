@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2055238799
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d491e192e44d5564aa9a1cc48678bfc5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -96,9 +96,8 @@ MonoBehaviour:
   cenario: 1
   meio: {fileID: 295502879517069338}
   topo: {fileID: 4219166796356354304, guid: 391627ff005a8d14f9de4de74f1f4185, type: 3}
-  player: {fileID: 0}
   yMin: -18
-  ySpawn: 18.8
+  ySpawn: 18
 --- !u!61 &1535977173046684030
 BoxCollider2D:
   m_ObjectHideFlags: 0

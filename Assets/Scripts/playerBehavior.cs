@@ -8,7 +8,7 @@ public class playerBehavior : MonoBehaviour
     [SerializeField] Image[] vidas;
     [SerializeField] Image fade;
     [SerializeField] Text textoC, textoScore, recorde;
-    [SerializeField] GameObject pause;
+    [SerializeField] GameObject pause, camera;
     [SerializeField] RectTransform home;
     public static int hgScore;
     bool fadeOver;
@@ -72,6 +72,8 @@ public class playerBehavior : MonoBehaviour
     {
         fade.color = new Color(0,0,0,0.7f);
         SaveLoad.recorde = scoreCount.Count;
+        camera.GetComponent<AudioSource>().Stop();
+        GetComponent<AudioSource>().Play();
         textoC.text = "GAME OVER";
         recorde.text = ("Recorde: " + hgScore.ToString());
         textoScore.text = ("Pontos: " + scoreCount.Count);
