@@ -9,23 +9,17 @@ public class SaveLoad : MonoBehaviour {
 
     public int HighScore;
     public static int recorde; 
-    public string DiretorioDoArquivo;
-    public string FormatoDoArquivo;
-    public string NomeDoArquivo;
 
     [Serializable]
     class DadosDoJogo
     {
         public int Int;
-        public float Float;
-        public string String;
-        public bool Bool;
     }
 
     public void Save()
     {
         BinaryFormatter binario = new BinaryFormatter();
-        FileStream arquivo = File.Create(DiretorioDoArquivo);
+        FileStream arquivo = File.Create(Application.persistentDataPath + "/Save.DAT");
         DadosDoJogo dados = new DadosDoJogo(); 
         dados.Int = HighScore;
 
@@ -35,10 +29,10 @@ public class SaveLoad : MonoBehaviour {
 
     public void Load()
     {
-        if (File.Exists(DiretorioDoArquivo) == true)
+        if (File.Exists(Application.persistentDataPath + "/Save.DAT") == true)
         {
             BinaryFormatter binario = new BinaryFormatter();
-            FileStream arquivo = File.Open(DiretorioDoArquivo, FileMode.Open);
+            FileStream arquivo = File.Open(Application.persistentDataPath + "/Save.DAT", FileMode.Open);
             DadosDoJogo dados = (DadosDoJogo)binario.Deserialize(arquivo);
 
             HighScore = dados.Int;
@@ -48,8 +42,7 @@ public class SaveLoad : MonoBehaviour {
 
     void Update ()
     {
-        DiretorioDoArquivo = Application.persistentDataPath + "/" + NomeDoArquivo + "." + FormatoDoArquivo;
-        GetComponent<MenuInicial>().score.text = HighScore.ToString();
+        GetComponent<MenuInicial>().score.text = ("Recorde: " + HighScore.ToString());
         Load();
         if (recorde > HighScore)
         {
