@@ -14,6 +14,7 @@ public class SaveLoad : MonoBehaviour {
     class DadosDoJogo
     {
         public int Int;
+        public bool mute;
     }
 
     public void Save()
@@ -22,6 +23,7 @@ public class SaveLoad : MonoBehaviour {
         FileStream arquivo = File.Create(Application.persistentDataPath + "/Save.DAT");
         DadosDoJogo dados = new DadosDoJogo(); 
         dados.Int = HighScore;
+        dados.mute = MenuInicial.mute;
 
         binario.Serialize(arquivo, dados);
         arquivo.Close();
@@ -36,6 +38,8 @@ public class SaveLoad : MonoBehaviour {
             DadosDoJogo dados = (DadosDoJogo)binario.Deserialize(arquivo);
 
             HighScore = dados.Int;
+            MenuInicial.mute = dados.mute;
+
             arquivo.Close();
         }
     }

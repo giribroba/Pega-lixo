@@ -5,7 +5,8 @@ public class lixoSpawn : MonoBehaviour
 {    
     [SerializeField] float xMax;
     [SerializeField] float Y;
-    [SerializeField] GameObject lata, colher, caixa, copo, garrafa, lampada, O2, copoSB, canudoA, canudoL;
+    [SerializeField] GameObject[] lixo;
+    [SerializeField] GameObject O2;
     [SerializeField] float CD, O2CD;
     
     public static float rotacao;
@@ -20,42 +21,12 @@ public class lixoSpawn : MonoBehaviour
     void Update()
     {
         X = Random.Range (-xMax, xMax);
-        tipo = Random.Range (0,10);
         if (cdTemp <= 0)
         {            
             rotacao = Random.Range(-1, 360);
             if (BarraO2.O2 > 0)
             {
-                switch (tipo)
-                {
-                    case 1:
-                        Instantiate(lata, new Vector3(X, Y), Quaternion.identity);
-                        break;
-                    case 2:
-                        Instantiate(colher, new Vector3(X, Y), Quaternion.identity);
-                        break;
-                    case 3:
-                        Instantiate(caixa, new Vector3(X, Y), Quaternion.identity);
-                        break;
-                    case 4:
-                        Instantiate(copo, new Vector3(X, Y), Quaternion.identity);
-                        break;
-                    case 5:
-                        Instantiate(garrafa, new Vector3(X, Y), Quaternion.identity);
-                        break;
-                    case 6:
-                        Instantiate(lampada, new Vector3(X, Y), Quaternion.identity);
-                        break;
-                    case 7:
-                        Instantiate(canudoL, new Vector3(X, Y), Quaternion.identity);
-                        break;
-                    case 8:
-                        Instantiate(canudoA, new Vector3(X, Y), Quaternion.identity);
-                        break;
-                    case 9:
-                        Instantiate(copoSB, new Vector3(X, Y), Quaternion.identity);
-                        break;
-                }
+                Instantiate(lixo[Random.Range(0, lixo.Length + 1)], new Vector3(X, Y), Quaternion.identity);
             }
             cdTemp = CD;
         }
