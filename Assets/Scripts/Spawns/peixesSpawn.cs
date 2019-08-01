@@ -12,6 +12,6 @@ public class peixesSpawn : MonoBehaviour
     }
     void Spawn()
     {
-        Instantiate(peixes[Random.Range(0, peixes.Length + 1)], new Vector2(3.8f, Random.Range(-3, yMax)), Quaternion.identity);
+        Instantiate(peixes[Random.Range(0, peixes.Length)], new Vector2(3.8f, Random.Range(-3, yMax)), Quaternion.identity);
     }
 }

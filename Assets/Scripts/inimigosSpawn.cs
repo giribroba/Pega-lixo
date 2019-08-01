@@ -13,10 +13,15 @@ public class inimigosSpawn : MonoBehaviour
     
     void Spawn()
     {
-        if(BarraO2.O2 > 0 )
+         var random = Random.Range(0, inimigos.Length);
+        if(random == 2)
         {
-            Instantiate(inimigos[Random.Range(0, inimigos.Length+1)], new Vector2(Random.Range(-xMin_max, xMin_max), 8),Quaternion.identity);
-        }  
+            
+        }
+        else if(BarraO2.O2 > 0 )
+        {
+            Instantiate(inimigos[random], new Vector2(Random.Range(-xMin_max, xMin_max), 8),Quaternion.identity);
+        }             
     }
 
 }

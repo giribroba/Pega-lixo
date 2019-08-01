@@ -26,7 +26,7 @@ public class lixoSpawn : MonoBehaviour
             rotacao = Random.Range(-1, 360);
             if (BarraO2.O2 > 0)
             {
-                Instantiate(lixo[Random.Range(0, lixo.Length + 1)], new Vector3(X, Y), Quaternion.identity);
+                Instantiate(lixo[Random.Range(0, lixo.Length)], new Vector3(X, Y), Quaternion.identity);
             }
             cdTemp = CD;
         }

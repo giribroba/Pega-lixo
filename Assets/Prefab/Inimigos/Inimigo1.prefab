@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8904751193152397319}
   - component: {fileID: 1947110175834720724}
   - component: {fileID: 9130590612176000458}
-  - component: {fileID: 1292530149}
   - component: {fileID: 1292530153}
+  - component: {fileID: -8278036104383024948}
   m_Layer: 0
   m_Name: Inimigo1
   m_TagString: Untagged
@@ -97,22 +97,6 @@ MonoBehaviour:
   speed: 7
   score: 0
   objeto: 1
---- !u!58 &1292530149
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703273560547169516}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.052707747, y: -0.34}
-  serializedVersion: 2
-  m_Radius: 0.49056354
 --- !u!95 &1292530153
 Animator:
   serializedVersion: 3
@@ -132,3 +116,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &-8278036104383024948
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703273560547169516}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.46, y: 2.11}
+  m_Direction: 0

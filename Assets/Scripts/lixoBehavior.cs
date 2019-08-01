@@ -46,6 +46,7 @@ public class lixoBehavior : MonoBehaviour
         }
         else if (other.tag == "Player" && objeto == tipo.inimigo)
         {
+            GetComponent<CapsuleCollider2D>().enabled = false;
             Personagem.GetComponent<playerBehavior>().perderVida();
             GetComponent<Animator>().SetBool("sumindo", true);
             speed /= 2;
